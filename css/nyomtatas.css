@@ -1,0 +1,26 @@
+nav {
+    display: none;
+}
+
+article#reszvetelek table {
+    border: 3px double black;
+    margin: auto;
+    border-collapse: collapse;
+}
+
+article#reszvetelek table td, article#dijak table th {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+article#reszvetelek table {
+    caption-side: bottom;
+}
+
+article video {
+    display: none;
+}
+
+img {
+    max-width: 25%;
+}

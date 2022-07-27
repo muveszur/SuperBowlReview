@@ -1,0 +1,437 @@
+/* ALAPSTÍLUS */
+
+/* BETŰTÍPUS */
+
+@import 'https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap';
+
+body {
+
+}
+
+h1,h2, h3 {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/************** HÁTTÉR **************/
+
+
+html {
+    font-family: Arial, Verdana, Helvetica, sans-serif;
+    background-color: #222222;
+    background-image: url('../photos/nfl_logo_kicsi.png');
+    background-repeat: no-repeat;
+    background-position: 4% 0.5%;
+}
+
+
+/************** TARTALOM BEHÚZÁSA (kisebb az oldal mérete horizontálisan) **************/
+
+
+body {
+    margin: auto;
+    width: 70%;
+    min-width: 40%;
+    max-width: 63%;
+    margin-top: 0.5%;
+}
+
+
+/************** FEJLÉC, FŐ RÉSZ, LÁBLÉC **************/
+
+
+header, main, footer {
+    background-color: white;
+    overflow: hidden;
+    padding: 1%;
+}
+
+header, footer {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+header {
+    border-radius: 10px 10px 0 0;
+}
+
+footer {
+    border-radius: 0 0 10px 10px;
+    margin-bottom: 8%;
+}
+
+main {
+    padding: 3%;
+}
+
+
+/************** SZÖVEGFORMÁZÁSOK - "CÍMSOROK" **************/
+
+
+h1 {
+    color: #D10A0A;
+}
+
+h2, h3 {
+    color: #013369;
+}
+
+p {
+    text-align: justify;
+}
+
+
+/************** FEJLÉC: OLDALMENÜ **************/
+
+
+footer > p {
+    text-align: center;    
+}
+
+nav#oldalmenu {
+    background-color: #ddd;
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-bottom: -10px;
+    overflow: hidden;
+    padding: 20px 40px 20px 40px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+nav#oldalmenu ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+nav#oldalmenu li {
+    display: inline;
+}
+
+header a {
+    text-decoration: none;
+    font-variant: small-caps;
+    font-size: 1.2rem;
+    color: black;
+    margin-right: 90px;
+}
+
+
+/************** FEJLÉC: GYENGÉNLÁTÓ MENÜ **************/
+
+
+header {
+    position: relative; 
+}
+
+nav#gyengenlato {
+    border: 1px solid black;
+    width: 210px;
+    position: absolute; 
+    /* left, top, right, bottom */
+    top: 10px;
+    right: 10px;
+    border-top-right-radius: 10px;
+    padding: 10px;
+}
+
+a#normalbetu {
+    display: none;
+}
+
+
+/************** FŐ RÉSZ, UGRÁS A MENÜHÖZ **************/
+
+
+main article+nav {
+    text-align: right;
+    border-top: 1px dotted grey;
+    margin: 20px 0px;
+}
+
+main article+nav:last-of-type {
+    border-style: none;
+}
+
+main article+nav a {
+    text-decoration: none;
+}
+
+
+/************** FŐ RÉSZ: LÉNYEG **************/
+
+
+article#lenyeg aside {         /* cigiző irányító képe elhelyezve */
+    float: right;
+    width: 18%;
+    border: 1px solid #999;
+    background-color: #013369;
+    padding: 10px;
+    margin-left: 20px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px lightgray;
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 20px;
+    color: white;
+}
+
+article#lenyeg aside figure {
+    display: block;
+    margin: 0 auto;
+}
+
+article#lenyeg+nav {
+    clear: both;
+}
+
+
+/************** FŐ RÉSZ: A SUPER BOWL HAJNALA **************/
+
+
+article#kezdetekvideo video {
+    display: block;
+    margin: 0 auto;
+}
+
+
+/************** FŐ RÉSZ: A SUPER BOWL TÖRTÉNETE A KEZDETEKTŐL NAPJAINKIG **************/
+
+
+article#kezdetek {
+    column-count: 2;
+    margin: 0 10px 10px 0;
+}
+
+article#kezdetek h2 {
+    float: left;
+    margin: 0 20px 20px 0; /* fentről órajárás szerint kell felsorolni */
+}
+
+article#kezdetek p:first-of-type {
+    margin-top: 0;
+}
+
+
+/************** FŐ RÉSZ: ÉRDEKESSÉGEK **************/
+
+
+article#erdekessegek figure {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+
+
+
+
+/************** FŐ RÉSZ: EGYMÁS MELLETTI LINKEK **************/
+
+
+.column {
+    float: left;
+    width: 33.33%;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+nav {
+    clear: both;
+}
+
+article#urlap {
+    clear: both;        /* rá már ne vonatkozzon a körbefuttatás */
+}
+
+p#elso {
+    padding-right: 5px;
+}
+
+p#masodik {
+    padding-top: 5px;
+}
+
+p#harmadik {
+    padding-left: 5px;
+    padding-top: 13px;
+}
+
+
+
+/************** FŐ RÉSZ: GYŐZELMEK - TÁBLÁZAT  **************/
+
+article#reszvetelek table {
+    border: 3px double grey;
+    margin: auto;
+    border-collapse: collapse;
+}
+
+article#reszvetelek table td, article#reszvetelek table th {
+    border: 1px solid gray;
+    padding: 5px;
+}
+
+article#reszvetelek table th {
+    background-color: #013369;
+    color: white;
+}
+
+article#reszvetelek table {
+    caption-side: bottom;
+}
+
+
+/************** ŰRLAP  **************/
+
+
+fieldset {
+	border-radius: 5px;
+	width:60%;
+	min-width:450px;
+	background-color:#E9E9E9;
+	margin-bottom:10px;
+}
+
+
+/************** BLOKKOK ELKERÜLÉSE  **************/
+
+
+nav.kipozicional a {
+    position: absolute;
+    left: -9999px;
+}
+
+nav.kipozicional a:focus {
+    position: static;
+    background-color: white;
+}
+
+
+/************** MENÜGOMBOK MEGKÜLÖNBÖZTETÉSE  **************/
+
+
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+  
+header nav li {
+    float: left;
+}
+  
+header nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+header nav li a:hover {
+    background-color: #111;
+  }
+
+
+header nav li a.active
+{
+    background-color: #D50A0A;
+    color: white; 
+}
+
+
+/************************************** ALOLDALAK KÉPEI ********************************/
+
+article#osszefoglalo figure {
+    padding-left: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+
+article#unneples figure {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
+
+
+
+
+
+
+/*************************************** RESZPONZIVITÁS ********************************************/
+
+/* desktop */
+@media screen and (max-width: 1100px) {
+   /*Megformázva feljebb*/
+}
+
+/* tablet */
+@media screen and (max-width:992px) {
+	.column {
+        float: none;
+        width: auto;
+    }
+
+    .row::after {
+        clear: both;
+    }
+
+    article#kezdetekvideo video {
+        /*display: block;
+        margin: 0 auto;*/
+        width: auto;
+    }
+}
+
+/* phone */
+@media screen and (max-width:576px) {
+	article#lenyeg aside  {
+        float: none;
+        width: auto;
+        margin-left: 0px;
+    }
+
+    nav#oldalmenu li {
+        display: block;
+    }
+
+    article#kezdetek {
+        column-count: 1;
+    }
+
+    article#valtozatai figure {
+        position: static;
+        margin: auto;
+    }
+    
+    article#lenyeg aside figure {
+        width: 70%;
+        display: block;
+        margin: 0 auto;
+    }
+
+    article#kezdetekvideo video {
+        display: block;
+        margin: 0 auto;
+        width: auto;
+    }
+
+
+}
+
+/*** RESPONSIVE IMAGES AND VIDEOS ***/
+
+figure img {max-width: 100%;}
+video {max-width: 100%;}

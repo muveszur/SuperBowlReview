@@ -1,0 +1,17 @@
+/* nagybetűs stílus */
+
+@import url('alapstilus.css');
+
+html {
+	font-size:2em;
+}
+
+a#nagybetu {
+	display: none;
+}
+
+a#normalbetu {
+	display: block;
+}
+
+/******* RAVASZKODNI  *******/
